@@ -118,7 +118,6 @@ def swissPairings():
         LIMIT 2 OFFSET """ + str(p)
         cursor.execute(q)
         res = cursor.fetchall()
-        cursor.close()
         res = res[0] + res[1]
         pairs.append(res)
     return pairs
